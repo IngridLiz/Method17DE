@@ -467,5 +467,5 @@ res = solve_ivp(metcal_ode, [0, sec], y1, method='LSODA', atol=1.e-15, rtol=1.e-
 flux_to_plot = [Jaco_v,  Jidh_v, Jkgdh_v, Jsl_v, Jsdh_v, Jfh_v, Jmdh_v, Jerout_v, Jserca_v, Juni_v, Jncx_v, Jf1_v, Jhl_v, Jant_v, Jo_v, Jhyd_v]
 
 
-np.save('./17DEmthodsres', np.array(res.y))
-np.save('./17DEmthodsres', np.array(flux_to_plot))
+np.save('./17DEmthodsres_LSODA', np.array(res.y))
+np.save('./17DEmthodsflux_LSODA', np.array(flux_to_plot))
