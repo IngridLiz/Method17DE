@@ -464,5 +464,8 @@ res = solve_ivp(metcal_ode, [0, sec], y1, method='LSODA', atol=1.e-15, rtol=1.e-
 #res = solve_ivp(metcal_ode, [0, sec], y1, method='RK45', atol=1.e-2, rtol=1.e-2, t_eval=ts)
 #res = solve_ivp(metcal_ode, [0, sec], y1, method='RK23', atol=1.e-10, rtol=1.e-10, t_eval=ts)
 
+flux_to_plot = [Jaco_v,  Jidh_v, Jkgdh_v, Jsl_v, Jsdh_v, Jfh_v, Jmdh_v, Jerout_v, Jserca_v, Juni_v, Jncx_v, Jf1_v, Jhl_v, Jant_v, Jo_v, Jhyd_v]
 
-np.save('./19DE_pdh_berndt_DOP853res', np.array(res))
+
+np.save('./17DEmthodsres', np.array(res.y))
+np.save('./17DEmthodsres', np.array(flux_to_plot))
